@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Open+Sans&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+
+  -webkit-tap-highlight-color: transparent; 
+}
+
+div {
+  -webkit-tap-highlight-color: transparent; 
+}
+
+li {
+  -webkit-tap-highlight-color: transparent; 
+}
+
+h2 {
+  all: unset;
+  font-weight: bold;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; 
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
