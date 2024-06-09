@@ -1,30 +1,26 @@
 <script setup>
+import { ref } from 'vue';
 import Expenditure from "./Expenditure.vue";
+
+const expenditures = ref([]);
+
+const addExpenditure = () => {
+  expenditures.value.push({}); // Добавляем новый пустой объект в массив expenditures
+};
 </script>
 
 <template>
     <div class="content">
         <div class="content-main">
-            <div class="container">
+            <div class="container" v-for="(expenditure, index) in expenditures" :key="index">
                 <expenditure />
             </div>
 
-            <div class="container">
-                <expenditure />
-            </div>
-
-            <div class="container">
-                <expenditure />
-            </div>
-
-            <div class="container">
-                <expenditure />
-            </div>
-
-            <button class="content__btn">
+            <button class="content__btn" @click="addExpenditure">
                 <img src="/icons/plus.svg" alt="">
                 <p>Добавить новый расход</p>
             </button>
+
         </div>
     </div>
 </template>

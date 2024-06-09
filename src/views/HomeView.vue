@@ -7,7 +7,7 @@ import Content from "../components/Content.vue";
 export default {
   data() {
     return {
-      isSidebar: !window.matchMedia("(max-width: 1160px)").matches
+      isSidebar: !window.matchMedia("(max-width: 1160px)").matches,
     };
   },
   components: {
@@ -40,8 +40,9 @@ export default {
   <Footer />
 </template>
 
-<style scoped>
+<style >
 .wrapper {
   min-height: 100vh;
 }
+
 </style>

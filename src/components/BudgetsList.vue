@@ -1,11 +1,11 @@
-<script setup>
+<script>
 
 </script>
 
 <template>
     <div class="budget__info">
         <p>Бюджет:</p>
-        <h1>10000р</h1>
+        <h1>{{ $store.state.budget }}</h1>
     </div>
 </template>
 

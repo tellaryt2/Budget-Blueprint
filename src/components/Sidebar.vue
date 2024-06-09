@@ -1,6 +1,27 @@
-<script setup>
+<script>
 import BudgetsList from './BudgetsList.vue';
+import Statistick from './Statistick.vue'
 
+export default {
+  data() {
+    return {
+      showModal: false
+    };
+  },
+  components: {
+    BudgetsList,
+    Statistick,
+  },
+  methods: {
+    showStatisticsModal(event){
+      event.preventDefault(); // Предотвращаем действие по умолчанию для ссылки
+      this.showModal = true;
+    },
+    closeModal(){
+      this.showModal = false;
+    }
+  }
+};
 </script>
 
 <template>
@@ -19,12 +40,14 @@ import BudgetsList from './BudgetsList.vue';
     <div class="sidebar__links">
       <div class="sidebar__link">
         <img src="/icons/statistics.svg" alt="" />
-        <a href="">Статистика</a>
+        <a href="" @click="showStatisticsModal($event)">Статистика</a>
       </div>
       <div class="sidebar__link">
         <img src="/icons/graphs.svg" alt="" />
         <a href="">Прогноз</a>
       </div>
+
+      <Statistick :showModal="showModal" @close="closeModal" />
     </div>
   </div>
 </template>
