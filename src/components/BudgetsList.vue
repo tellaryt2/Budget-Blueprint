@@ -5,7 +5,10 @@
 <template>
     <div class="budget__info">
         <p>Бюджет:</p>
-        <h1>{{ $store.state.budget }}</h1>
+        <div class="budget__digit">
+            <h1>{{ $store.state.budget }}</h1>
+            <img src="/icons/edit.svg" alt="">
+        </div>
     </div>
 </template>
 
@@ -32,5 +35,15 @@
     color: #4f8f69;
     font-weight: 600;
     line-height: 1.5;
+}
+
+.budget__digit {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+.budget__digit img {
+    width: 15px;
 }
 </style>

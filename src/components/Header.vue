@@ -33,6 +33,10 @@
                 if (this.isAdaptiveSizeScreen) {
                     this.isVisibleBurgerMenu = !this.isVisibleBurgerMenu;
                 }
+            },
+            logout() {
+            // Реализуйте здесь логику выхода из системы, если необходимо
+            this.$router.push({ name: 'auth' }); // Перенаправление на страницу авторизации
             }
         }
     }
@@ -61,12 +65,12 @@
                     </div>
                 </div>
                 <div class="navbar__profile">
-                    <button @click="toggleBurgerMenu" class="navbar__profile-btn">
+                    <button @click="toggleBurgerMenu" class="navbar__profile-btn leave-btn">
                         <img src="/icons/icon-profile.svg" alt="">
                         <p>Иван Иванов</p>
                     </button>
-                    <button class="navbar__profile-btn leave-btn">
-                        <p>Выход</p>
+                    <button @click="logout" class="navbar__profile-btn leave-btn">
+                        <p>Войти</p>
                     </button>
                 </div>
             </div>
